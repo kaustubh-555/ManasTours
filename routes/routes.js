@@ -54,6 +54,7 @@ router.post("/getTourData",getTourData)
 router.post("/editTourData",editTourData)
 router.post("/deleteTour",deleteTour)
 router.get("/logout",logout);
+router.post("/register",userRegisteration)
 
 
 module.exports=router

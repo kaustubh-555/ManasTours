@@ -25,8 +25,7 @@ const userRegisteration=async(req,res)=>{
         res.json({status:status,msg:"Username already exists please use another username !"})
     }
     else{
-        let pass=bcrypt.genSaltSync(process.env.bcryptSalt,userobj.password);
-        userobj.password=pass;
+        // userobj.password=pass;
         const result=await User.create(userobj);
         if(result){
             status=true;

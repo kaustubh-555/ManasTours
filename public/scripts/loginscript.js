@@ -14,7 +14,7 @@ loginBtn.addEventListener('click',async (e)=>{
         return response.json();
     }).then((data)=>{
         if(data.status==true){
-            window.location.href="http://localhost:3500/index.html";
+            window.location.href="./index.html";
         }
         else{
             alert(data.msg);

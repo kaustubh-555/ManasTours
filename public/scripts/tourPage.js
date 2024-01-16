@@ -28,7 +28,7 @@ function showData(tour){
 
 let Rate=document.getElementById("Rate");
 
-let tour=fetch("/getTourData",{
+let tour=fetch("https://manastours.onrender.com/getTourData",{
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({id: id})
@@ -40,7 +40,7 @@ let tour=fetch("/getTourData",{
 
 
 
-let user=fetch("/getUser",{
+let user=fetch("https://manastours.onrender.com/getUser",{
     method: 'GET',
     headers: {'Content-Type': 'application/json'},
 }).then((response)=>{
@@ -87,7 +87,7 @@ function showRatingDialog() {
   function setRating(rating) {
     // Perform the necessary action with the user's rating (e.g., send it to the server)
     console.log("User rating: " + rating);
-    fetch("/updateRating",{
+    fetch("https://manastours.onrender.com/updateRating",{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({id: id,rating: rating})

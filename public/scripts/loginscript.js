@@ -3,7 +3,7 @@ loginBtn.addEventListener('click',async (e)=>{
     e.preventDefault();
     let usernamefeild=document.getElementById("username").value;
     let passwordfeild=document.getElementById("password").value;
-    await fetch('/login',{
+    await fetch('https://manastours.onrender.com/login',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body : JSON.stringify({

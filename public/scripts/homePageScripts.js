@@ -14,7 +14,7 @@ function loginChanges(userobj){
     anchor.textContent = 'logout'; // Replace with the desired text/content
     anchor.addEventListener("click",()=>{
         // deleteCookie('user'); 
-        fetch("/logout",{
+        fetch("https://manastours.onrender.com/logout",{
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         }).then((response)=>{return response.json()}).then((data)=>{
@@ -34,7 +34,7 @@ function addTourCard(id,tour){
 
         tourCard.innerHTML = `
             <div class="tourCardImage">
-                <img src="./images/${tour.imageCover}" alt="${tour.name}" width: '170' height: '120'>
+                <img src="https://manastours.onrender.com/images/${tour.imageCover}" alt="${tour.name}" width: '170' height: '120'>
             </div>
             <div class="tourCardDetails">
                 <div class="tourCardTitle">
@@ -87,7 +87,7 @@ function addDiscountTours(tourList){
     })
 }
 
-let user=fetch("/getUser",{
+let user=fetch("https://manastours.onrender.com/getUser",{
     method: 'GET',
     headers: {'Content-Type': 'application/json'},
 }).then((response)=>{
@@ -104,7 +104,7 @@ user.then((data)=>{
 })
 
 async function getHomePageData(){
-    await fetch("/getHomePageTours",{
+    await fetch("https://manastours.onrender.com/getHomePageTours",{
         method: 'GET',
         headers: {'Content-Type': 'application/json'},
     }).then((response)=>{
